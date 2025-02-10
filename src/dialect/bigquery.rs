@@ -82,4 +82,7 @@ impl Dialect for BigQueryDialect {
     fn supports_timestamp_versioning(&self) -> bool {
         true
     }
+
+    // See <https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#group_by_clause>
+    fn supports_group_by_expr(&self) -> bool { true }
 }
